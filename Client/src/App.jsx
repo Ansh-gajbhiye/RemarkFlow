@@ -1,0 +1,9 @@
+import React from 'react'
+
+export const App = () => {
+  return (
+    <div className='class="text-3xl font-bold underline'>App</div>
+  )
+}
+
+export default App
