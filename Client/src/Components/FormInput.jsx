@@ -31,7 +31,7 @@ const FormInput = () => {
           <div>
             <label>LOS Number: </label>
             <input {...register('losNumber')} placeholder="e.g. 123456" />
-          </div>
+          </div>  
           <div>
             <label>Salary Month: </label>
             <input {...register('salaryMonth')} type="month" />
