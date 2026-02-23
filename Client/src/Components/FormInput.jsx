@@ -1,8 +1,10 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 // Pure function – easy to test and reuse
 const generateRemark = (values) => {
+  
   const {
     losNumber = '______',
     applicantName = '______',
@@ -17,10 +19,12 @@ const generateRemark = (values) => {
   return `${losNumber} Visited At The Given Address As Mentioned On Application Form For Verification Of Salary Slip Of ${applicantName} For The Month Of ${salaryMonth} Is Verbally Check And Found To Be Ok Confirmed By ${personMetPost} mr ${personMet} Who Confirmed That Applicant Is Working In ${organisation} As A ${applicantPost} From ${applicantworkingsince} Hence over all Status is Positive.`;
 };
 
+
 const FormInput = () => {
   const { register, watch } = useForm();
   const values = watch();
-
+  
+const navigate = useNavigate();
   return (
     // Minimal layout: two columns side by side on large screens
     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', padding: '2rem' }}>
@@ -31,7 +35,7 @@ const FormInput = () => {
           <div>
             <label>LOS Number: </label>
             <input {...register('losNumber')} placeholder="e.g. 123456" />
-          </div>  
+          </div>
           <div>
             <label>Salary Month: </label>
             <input {...register('salaryMonth')} type="month" />
@@ -71,6 +75,12 @@ const FormInput = () => {
         </div>
         <button type="button" onClick={() => alert('Generate PDF')}>
           Generate Report
+        </button>
+        <button
+          onClick={() => navigate('/')}
+          className="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg"
+        >
+          Back to Home
         </button>
       </div>
     </div>
