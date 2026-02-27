@@ -2,11 +2,12 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
 const userSchema = new mongoose.Schema({
-  email: { type: String, required: true, unique: true },
+  userId: { type: String, required: true, unique: true }, 
   password: { type: String, required: true },
   name: { type: String, required: true },
   role: { type: String, enum: ['Maker', 'Checker', 'Admin'], default: 'Maker' },
-  isActive: { type: Boolean, default: true }
+  isActive: { type: Boolean, default: true },
+  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' } 
 }, { timestamps: true });
 
 userSchema.pre('save', async function(next) {
