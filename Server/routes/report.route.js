@@ -3,6 +3,7 @@ import Report from "../models/report.model.js";
 
 const router = express.Router();
 
+
 router.post('/create', async (req, res)=>{
      try {
         const newreports = new Report(req. body);
@@ -12,5 +13,13 @@ router.post('/create', async (req, res)=>{
         res.status(500).json({message:"not saved ", error: error.message})
         
      }
+})
+
+router.post('/generate', async (req, res)=>{
+ try {
+   
+ } catch (error) {
+   
+ }
 })
 export default router
