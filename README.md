@@ -1,4 +1,4 @@
-# RemarksFlow – Bank Loan Verification Report Automation
+# RemarksFlow – Report Automation
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-18.2-blue)](https://reactjs.org/)
@@ -6,7 +6,7 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-6.0-brightgreen)](https://www.mongodb.org/)
 [![Tailwind](https://img.shields.io/badge/Tailwind-3.0-38b2ac)](https://tailwindcss.com/)
 
-**RemarksFlow** is a full‑stack MERN application that automates the creation of bank loan verification reports. It replaces manual copy‑pasting in Word with a fast, validated form‑to‑PDF workflow, reducing report generation time from 20+ minutes to under a minute while ensuring consistency and quality.
+**RemarksFlow** is a full‑stack MERN application that automates the creation of reports. It replaces manual copy‑pasting in Word with a fast, validated form‑to‑PDF workflow, reducing report generation time from 20+ minutes to under a minute while ensuring consistency and quality.
 
 ---
 
@@ -25,8 +25,8 @@ This leads to high error rates, frustrated employees, and delayed submissions.
 
 RemarksFlow provides a **TurboTax‑like guided experience**:
 
-1. **Select a bank** from a clean dashboard.
-2. **Choose a product** (e.g., HDFC → LS, LOS, etc.).
+1. **Select a role** from a clean dashboard.
+2. **Choose a product** (e.g.,  → LS, LOS, etc.).
 3. **Fill a smart form** – validation prevents mistakes.
 4. **Generate a perfect PDF/Word report** in one click.
 
